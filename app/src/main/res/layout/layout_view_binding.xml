@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/tallField"
+            android:hint="키를 입력하세요." android:textSize="24sp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="99dp" app:layout_constraintEnd_toStartOf="@+id/textView"/>
+    <TextView
+            android:text="cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/tallField" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="7dp" app:layout_constraintBottom_toBottomOf="@+id/tallField"
+            android:layout_marginEnd="27dp" android:layout_marginRight="27dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/weightField"
+            android:textSize="24sp" android:hint="몸무게를 입력하세요." app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="32dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            android:layout_marginStart="32dp"/>
+    <TextView
+            android:text="kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" android:textSize="24sp"
+            android:layout_marginTop="52dp" app:layout_constraintTop_toBottomOf="@+id/tallField"
+            app:layout_constraintStart_toEndOf="@+id/weightField"/>
+    <TextView
+            android:text="키와 체중을 입력 후 BMI 버튼을 눌러 주세요."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultLabel" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="59dp"
+            android:layout_marginLeft="41dp" android:layout_marginStart="41dp"
+            app:layout_constraintTop_toBottomOf="@+id/weightField"/>
+    <Button
+            android:text="BMI 계산"
+            android:layout_width="253dp"
+            android:layout_height="197dp"
+            android:id="@+id/bmiButton" android:textSize="30sp"
+            android:typeface="serif" android:textStyle="bold" android:background="@android:color/holo_orange_light"
+            android:textColor="@android:color/white" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="75dp"/>
+</android.support.constraint.ConstraintLayout>
