@@ -14,18 +14,36 @@ class ControlKotlinActivity : AppCompatActivity() {
         button.setOnClickListener {
             val number = numberField.text.toString().toInt()
 
-            if (number % 2 == 0) {
-                Toast.makeText(applicationContext,
-                    "2의 배수 : ${number}",
-                    Toast.LENGTH_SHORT).show()
-            } else if (number % 3 == 0) {
-                Toast.makeText(applicationContext,
-                    "3의 배수 : ${number}",
-                    Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(applicationContext,
-                    "${number}",
-                    Toast.LENGTH_SHORT).show()
+//            if (number % 2 == 0) {
+//                Toast.makeText(applicationContext,
+//                    "2의 배수 : ${number}",
+//                    Toast.LENGTH_SHORT).show()
+//            } else if (number % 3 == 0) {
+//                Toast.makeText(applicationContext,
+//                    "3의 배수 : ${number}",
+//                    Toast.LENGTH_SHORT).show()
+//            } else {
+//                Toast.makeText(applicationContext,
+//                    "${number}",
+//                    Toast.LENGTH_SHORT).show()
+//            }
+
+//            when {
+//                number % 2 == 0 -> Toast.makeText(applicationContext,
+//                    "2의 배수 : ${number}",
+//                    Toast.LENGTH_SHORT).show()
+//                number % 3 == 0 -> Toast.makeText(applicationContext,
+//                    "3의 배수 : ${number}",
+//                    Toast.LENGTH_SHORT).show()
+//                else -> Toast.makeText(applicationContext,
+//                    "${number}",
+//                    Toast.LENGTH_SHORT).show()
+//            }
+
+            when {                  //help함수 사용.
+                number % 2 == 0 -> toastShort("2의 배수 : ${number}")
+                number % 3 == 0 -> toastShort("3의 배수 : ${number}")
+                else -> toastLong("${number}")
             }
 
             when (number) {
