@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static kr.hs.emirim.Sagittta.kotlinsample.ToastUtilJava.toastShort;          //static 함수까지 import 해줌.
+
 public class ControlJavaActivity extends AppCompatActivity {
 
     EditText numberField;
@@ -26,18 +28,26 @@ public class ControlJavaActivity extends AppCompatActivity {
                 int number = Integer.parseInt(
                         numberField.getText().toString());
 
+//                if (number % 2 == 0) {
+//                    Toast.makeText(getApplicationContext(),         //this가 안 되는 경우도 많기 때문에
+//                            "2의 배수 : " + number,
+//                            Toast.LENGTH_SHORT).show();             //show 메소드가 있어야 화면에 나오게 됨.
+//                } else if (number % 3 == 0) {
+//                    Toast.makeText(getApplicationContext(),
+//                            "3의 배수 : " + number,
+//                            Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(getApplicationContext(),
+//                            "" + number,
+//                            Toast.LENGTH_SHORT).show();
+//                }
+
                 if (number % 2 == 0) {
-                    Toast.makeText(getApplicationContext(),         //this가 안 되는 경우도 많기 때문에
-                            "2의 배수 : " + number,
-                            Toast.LENGTH_SHORT).show();             //show 메소드가 있어야 화면에 나오게 됨.
+                    toastShort("2의 배수 : " + number);
                 } else if (number % 3 == 0) {
-                    Toast.makeText(getApplicationContext(),
-                            "3의 배수 : " + number,
-                            Toast.LENGTH_SHORT).show();
+                    toastShort("3의 배수 : " + number);
                 } else {
-                    Toast.makeText(getApplicationContext(),
-                            "" + number,
-                            Toast.LENGTH_SHORT).show();
+                    ToastUtilKotlinKt.toastLong("" + number);
                 }
 
                 switch (number) {
