@@ -15,3 +15,4 @@ fun toastLong(message: String) {
 fun toast(message: String, length: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(MainApplication.getAppContext(), message, length).show()
 }
+// @JVM-- 구문을 많이 사용함.
