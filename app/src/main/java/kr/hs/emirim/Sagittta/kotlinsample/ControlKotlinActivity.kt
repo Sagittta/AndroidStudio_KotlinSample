@@ -41,14 +41,14 @@ class ControlKotlinActivity : AppCompatActivity() {
 //            }
 
             when {                  //help함수 사용.
-                number % 2 == 0 -> toastShort("2의 배수 : ${number}")
-                number % 3 == 0 -> toastShort("3의 배수 : ${number}")
+                number % 2 == 0 -> toastShort("${number} 는 2의 배수입니다.")
+                number % 3 == 0 -> toastShort("${number} 는 3의 배수입니다.")
                 else -> toastLong("${number}")
             }
 
             when (number) {
-                4 -> button.text = "실행 - 4"
-                9 -> {
+                in 1..4 -> button.text = "실행 - 4"
+                9, 18 -> {
                     button.text = "실행 - 9"
                 }
                 else -> button.text = "실행"
